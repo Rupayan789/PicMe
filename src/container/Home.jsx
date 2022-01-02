@@ -14,7 +14,7 @@ const Home = () => {
     const location = useLocation()
     const navigate = useNavigate()
 
-    console.log(location)
+  
 
     const userInfo = fetchUser()
     useEffect(() => {

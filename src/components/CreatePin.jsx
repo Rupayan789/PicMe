@@ -30,7 +30,7 @@ const CreatePin = ({user}) => {
                 useWebWorker:true,
                 maxWdthOrHeight:1080,
                 onProgress:(progress)=>{
-                    console.log("Progress",progress)
+                  
                 }
             }
             const compressedImage = await imageCompression(e.target.files[0],options)

@@ -25,7 +25,7 @@ const PinDetails = () => {
                         query = pinDetailMorePinQuery(data[0])
                         client.fetch(query).then(res => setPins(res))
                     }
-                }).catch(err => console.log(err.message))
+                })
         }
     }
     const addComment = (e) => {
@@ -45,12 +45,12 @@ const PinDetails = () => {
                 }])
                 .commit()
                 .then((data) => {
-                    console.log(data)
+                   
                     fetchPinDetails()
                     setComment('')
                     setAddingComment(false)
                 })
-                .catch(err => console.log(err.message))
+                
         }
     }
 

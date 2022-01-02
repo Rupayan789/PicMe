@@ -18,7 +18,6 @@ const Feed = () => {
                 setPins(data)
                 setLoading(false)
             }))
-            .catch(err => console.log(err.message))
         } else {
             client.fetch(feedQuery)
             .then(data => {
