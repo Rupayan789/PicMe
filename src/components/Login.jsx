@@ -41,7 +41,7 @@ const Login = () => {
                     <div className="p-5">
                         {/* <img src={logo} alt="logo" width="130px"/> */}
                         <div className="text-5xl text-white font-semibold">
-                            PicME
+                            Pic<span className="text-iconColorStrong">ME</span>
                         </div>
                     </div>
 

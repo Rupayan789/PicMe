@@ -51,6 +51,7 @@ module.exports = {
         primary: '#FAFAFA',
         secColor: '#efefef',
         navColor: '#BEBEBE',
+        iconColorStrong:"#c3165b"
       },
       backgroundColor: {
         mainColor: '#FBF8F9',
