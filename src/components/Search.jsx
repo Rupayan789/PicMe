@@ -33,8 +33,8 @@ const Search = ({ searchTerm, setSearchTerm }) => {
     return (
         <div>
             {    loading && <Spinner message="Searching for pins" /> }
-            {    pins?.length != 0 && <MasonryLayout  pins={pins} /> }
-            {    pins?.length == 0 && searchTerm != '' && !loading && (<div className="mt-10 text-center text-xl">No Pins Found</div>)}
+            {    pins?.length !== 0 && <MasonryLayout  pins={pins} /> }
+            {    pins?.length === 0 && searchTerm !== '' && !loading && (<div className="mt-10 text-center text-xl">No Pins Found</div>)}
         </div>
     )
 }

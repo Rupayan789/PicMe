@@ -3,7 +3,6 @@ import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router'
 import { FcGoogle } from 'react-icons/fc'
 import sharevideo from '../assets/bg-video.mp4'
-import logo from "../assets/logo.jpeg"
 import { client } from '../container/client'
 
 

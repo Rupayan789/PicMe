@@ -35,9 +35,8 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
         })
     }
     const deletePin = id => {
-        client.
-        delete(id).
-        then(()=>{
+        client.delete(id)
+        .then(()=>{
             window.location.reload()
         })
     }
@@ -50,7 +49,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                 onMouseLeave={(e) => {setPostHovered(false)}}
                 onClick={() => navigate(`/pin-detail/${_id}`)}
             >
-                <img className="rounded-lg w-full" src={urlFor(image).width(250).url()} alt="pin-image" />
+                <img className="rounded-lg w-full" src={urlFor(image).width(250).url()} alt="pin" />
                 {
                     postHovered && (
                         <div className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50" style={{ height: '100%' }}>
@@ -87,14 +86,14 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                     destination && (<a 
                                 href={destination}
                                 target="_blank"
-                                target="noreferrer"
+                                rel="noreferrer"
                                 className="bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-empty">
                                     <BsFillArrowUpRightCircleFill/>
                                     {destination.length > 15 ? `${destination.slice(0,15)}...` : destination}
                                 </a>) 
                                 }
                                 {
-                                    postedBy?._id == user.googleId && (
+                                    postedBy?._id === user.googleId && (
                                         <button
                                         onClick={(e) => {
                                             e.stopPropagation()

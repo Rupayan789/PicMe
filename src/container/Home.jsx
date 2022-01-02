@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { HiMenu } from 'react-icons/hi'
 import { AiFillCloseCircle } from 'react-icons/ai'
-import { Link, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
+import { Link, Routes, Route, useNavigate } from 'react-router-dom'
 import { Sidebar, UserProfile } from '../components'
 import { client } from './client'
 import logo from "../assets/logo.jpeg"
@@ -11,7 +11,6 @@ const Home = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false)
     const [user, setUser] = useState(null)
     const scrollRef = useRef(null)
-    const location = useLocation()
     const navigate = useNavigate()
 
   
@@ -33,12 +32,13 @@ const Home = () => {
                     setUser(data[0])
                 })
         }
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
         if(userInfo)
         scrollRef.current.scrollTo(0, 0)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     if(userInfo)
     return (
